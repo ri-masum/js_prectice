@@ -1,0 +1,6 @@
+function hourToMinute(number){
+
+
+
+    
+}

@@ -46,3 +46,16 @@ return result;
 // let result=factorialWhileRev(21);
 // console.log(result);
  
+function factorial1(number) {
+    let result = 1;
+    for (let i = 1;i<=number; i++) {
+      result = result * i;
+      var index = i;
+      console.log(index,result);
+
+    }
+    return result;
+  }
+  var factNumber=20;
+  const fact=factorial1(factNumber);
+  console.log('fact of ',factNumber, 'is ',fact);
