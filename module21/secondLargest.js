@@ -1,5 +1,7 @@
+
+// finding the second largest element  of an array 
 function secondLargest(arr) {
-  let largest = (second = -2454635434);
+  let largest = second = -2454635434;
   size=arr.length;
   if (size < 2) {
     console.log("Invalid input");
