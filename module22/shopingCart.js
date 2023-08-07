@@ -1,0 +1,4 @@
+const shopingCart=[
+
+    {name:'shoe',}
+]
