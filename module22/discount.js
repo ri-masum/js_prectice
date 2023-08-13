@@ -29,4 +29,5 @@ function ticketPrice(ticketQuantity) {
 }
 
 const totalPrice = ticketPrice(202);
-console.log("price: ", totalPrice);
+// console.log("price: ", totalPrice);
+console.log('A big big big big big Fuck you');

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="line">This line will be deleted</h1>
+
+    <input type="text" name="" id="textarea" placeholder="type delete to delete the text " />
+    <button id="btn-delete" disabled>delete</button>
+
+    <script>
+
+        document.getElementById('btn-delete').addEventListener('click',function(){
+
+            const secret=document.getElementById('line');
+            secret.style.display='none'
+
+            
+        })
+
+        document.getElementById('textarea').addEventListener('keyup',function(event){
+
+            const text=event.target.value;
+
+            const btn=document.getElementById('btn-delete');
+            if(text==='delete'){
+                btn.removeAttribute('disabled')
+            }
+            else{
+                btn.setAttribute('disabled',true)
+            }
+        })
+
+    //   document
+    //     .getElementById("textarea")
+    //     .addEventListener("keyup", function (event) {
+    //       const text = event.target.value;
+
+    //       const btn = document.getElementById("btn-delete");
+    //       if (text === 'masum') {
+    //         btn.removeAttribute("disabled");
+    //       }
+    //       else{
+    //         btn.setAttribute('disabled',true)
+    //       }
+    //     });
+
+    //   document
+    //     .getElementById("btn-delete")
+    //     .addEventListener("click", function () {
+    //       const secret = document.getElementById("line");
+    //       secret.style.display = "none";
+    //     });
+
+      //     document.getElementById('textarea').addEventListener('keyup',function(event){
+      //         const text=event.target.value;
+      //         const deleteBtn=document.getElementById('btn-delete');
+      //         if(text=== 'delete'){
+      //             deleteBtn.removeAttribute('disabled')
+      //         }
+      //         else{
+      //             deleteBtn.setAttribute('disabled',true)
+      //         }
+      //     })
+
+      //  document.getElementById('btn-delete').addEventListener('click',function(){
+
+      //     const secret=document.getElementById('line');
+      //     secret.style.display='none';
+      //  })
+    </script>
+  </body>
+</html>
