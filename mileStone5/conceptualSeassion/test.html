@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">click me</button>
+
+    <ul id="list">
+      <li>nise unlimited leka asbe</li>
+    </ul>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        const list=document.getElementById('list');
+
+       for(let i=1;i<=10000;i++){
+        const li=document.createElement('h6');
+        li.innerText='masum'+i;
+        list.appendChild(li);
+       }
+        
+      });
+    </script>
+  </body>
+</html>
