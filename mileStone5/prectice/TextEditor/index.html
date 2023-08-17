@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextEditor</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+    <style>
+        
+        #textarea{
+            resize: none;
+
+        }
+    </style>
+<body>
+
+    <div class="artboard artboard-horizontal phone-2 bg-sky-200 rounded-xl text-center w-1/2 mx-auto mt-20">
+
+        <h1 class="text-xl text-black font-semibold">My Text Editor</h1>
+        <div class=" bg-white border-black">
+
+            <!-- nav section -->
+            <nav>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                      <div class="dropdown">
+                      </div>
+                      <a class="btn btn-ghost normal-case text-xl bg-red-200" id="boldBtn">B</a>
+                      <a class="btn btn-ghost normal-case text-xl bg-sky-200">I</a>
+                      <a class="btn btn-ghost normal-case text-xl bg-gray-200">U</a>
+                    </div>
+                    <div class="navbar-center  flex">
+                      <ul class="menu menu-horizontal px-1">
+                        <li><a>Left</a></li>
+                        <li><a>Right</a></li>
+                        <li><a>Center</a></li>
+                        <li><a>End</a></li>
+                      </ul>
+                    </div>
+                    <div class="navbar-end">
+
+                        <!-- color picker -->
+                        <label for="colorPicker">Pickcolor:</label>
+                        <input type="color" id="colorPicker" name="colorPicker" value="#000000">
+                    
+                        <div id="colorBox" ></div>
+                    
+                    </div>
+                  </div>
+            </nav>
+
+            <textarea id="textarea" placeholder="helo" class="textarea textarea-bordered textarea-lg w-9/12   bg-white text-black"  rows="7" cols="40" ></textarea>
+        </div>
+
+
+    </div>
+
+    <script>
+          const colorPicker = document.getElementById('colorPicker');
+        const colorBox = document.getElementById('colorBox');
+
+        colorPicker.addEventListener('input', (event) => {
+            const selectedColor = event.target.value;
+            colorBox.style.backgroundColor = selectedColor;
+        });
+    </script>
+    <script src="js/editor.js"></script>
+    
+</body>
+</html>
