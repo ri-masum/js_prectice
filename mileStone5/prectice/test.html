@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bold Text Example</title>
+</head>
+<body>
+  <textarea id="textarea"></textarea>
+  <button id="boldBtn">Make Bold</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function getValueById(element) {
+        const value = document.getElementById(element);
+        const valueString = value.value; // Use value instead of innerText
+        return valueString;
+      }
+
+      function setText(elementId, value) {
+        const element = document.getElementById(elementId);
+        element.innerHTML = value;
+      }
+
+      document.getElementById('boldBtn').addEventListener('click', function() {
+        const textArea = getValueById('textarea');
+        const boldText = '<b>${textArea}</b>';
+        setText('textarea', boldText);
+      });
+    });
+  </script>
+</body>
+</html>
