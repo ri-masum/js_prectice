@@ -31,3 +31,25 @@ const mult=multiply(7,9)
 
 // no parameter
 
+// const test=a=>console.log(a,a,a);
+
+// const print=test('fuck you');
+
+
+const getAge=(person)=>person.age;
+const student={
+    name:'masum',
+    age:23
+}
+const age =getAge(student)
+// console.log(age);
+
+const getSecond=numbers=> numbers[1];
+const number=getSecond([4,23,234,2,23,245,55,2]);
+
+// console.log(number);
+
+const numbers=[4,23,53,23,23,45,3,23,3];
+const arrayMax=Math.max(...numbers);
+console.log(...numbers);
+console.log(arrayMax);
