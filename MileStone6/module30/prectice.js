@@ -53,7 +53,7 @@ const output = squreFunction(numbers);
 // problem 5
 
 const twoArray = (one, two) => {
-  const combine = one.concat(two);
+  const combine = [...one,...two];
 
   const max = Math.max(...combine);
   return max;
